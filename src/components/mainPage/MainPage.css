@@ -1,0 +1,14 @@
+.mainpage-container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+
+.mainpage-container::-webkit-scrollbar {
+  display: none;
+}

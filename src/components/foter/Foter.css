@@ -1,0 +1,59 @@
+.Foter {
+    width: 100%;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    padding: 60px 100px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Foter-rights {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.Foter-Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Foter-creator {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.Foter-Block img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 600px) {
+    .Foter {
+        padding: 40px 20px;
+    }
+
+    .Foter-creator {
+        font-size: 1rem;
+    }
+
+    .Foter-rights {
+        font-size: 0.9rem;
+    }
+
+    .Foter-Block img {
+        width: 80px;
+        height: 80px;
+        border-width: 2px;
+    }
+}

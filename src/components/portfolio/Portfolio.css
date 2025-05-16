@@ -1,0 +1,222 @@
+.Portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px 40px;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  user-select: none;
+  padding-bottom: 60px;
+}
+
+.Portfolio-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #111;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.Portfolio-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Portfolio-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 660px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.Portfolio-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+}
+
+.Portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(130deg, rgba(255,255,255,0.05), rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  transform: rotate(0deg);
+  animation: shineRotate 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shineRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Portfolio-image {
+  max-width: 100%;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  border: 2px solid #e2e2e2;
+  object-fit: cover;
+}
+
+.Portfolio-card h3 {
+  font-size: 1.8rem;
+  color: #0a0a0a;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Portfolio-card p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 26px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.Portfolio-link {
+  display: inline-block;
+  padding: 10px 36px;
+  border-radius: 28px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #000000, #222222);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.Portfolio-link:hover {
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.Portfolio-left-btn,
+.Portfolio-right-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #111;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: auto;
+  height: auto;
+  padding: 0 8px;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: scale 0.2s ease;
+  z-index: 10;
+}
+
+.Portfolio-left-btn {
+  left: 10px;
+}
+
+.Portfolio-right-btn {
+  right: 10px;
+}
+
+.Portfolio-left-btn:hover,
+.Portfolio-right-btn:hover {
+  color: #000;
+  scale: 1.1;
+}
+
+@media (max-width: 768px) {
+  .Portfolio-left-btn,
+  .Portfolio-right-btn {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Portfolio-left-btn,
+  .Portfolio-right-btn {
+    font-size: 1.6rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Portfolio-container {
+    margin: 10px;
+  }
+
+
+  .Portfolio-left-btn {
+    left: -10px;
+  }
+  
+  .Portfolio-right-btn {
+    right: -10px;
+  }
+}
+
+
+
+.Portfolio-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .Portfolio-title {
+    font-size: 1.8rem;
+  }
+
+  .Portfolio-card {
+    padding: 6px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .Portfolio-title {
+    font-size: 1.5rem;
+  }
+}
